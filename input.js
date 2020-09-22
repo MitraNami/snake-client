@@ -3,8 +3,6 @@
  * Specifically, so that we can handle user input via stdin
  */
 
-const { connect } = require("./client");
-
 // Stores the active TCP connection object.
 let connection;
 
@@ -26,10 +24,13 @@ const handleUserInput = function(key) {
  } else if (key === 'a') {
    connection.write("Move: left");
  } else if (key === 's') {
-  connection.write("Move: down");
+   connection.write("Move: down");
  } else if (key === 'd') {
-  connection.write("Move: right");
+   connection.write("Move: right");
+ } else if (key === "\u0026") {
+   connection.write("Say: I rock!");
  }
+
 
 };
 
