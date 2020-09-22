@@ -15,6 +15,11 @@ const connect = function() {
     conn.write("Name: m1t");
   });
 
+  //"hard-coded" Move: up message to the server.
+  // conn.on('connect', () => {
+  //   const timer = setInterval(() => conn.write("Move: up"), 50);
+  // });
+
   // interpret incoming data as text
   conn.setEncoding('utf8');
   conn.on('data', data => {
